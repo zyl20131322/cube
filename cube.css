@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cube {
+    height: 180px;
+    width: 180px;
+    transform-style: preserve-3d;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -90px;
+    margin-left: -90px;
+    animation: mychange 6s linear infinite;
+    -moz-animation: mychange 6s linear infinite; /* Firefox */
+    -webkit-animation: mychange 6s linear infinite; /* Safari and Chrome */
+    -o-animation: mychange 6s linear infinite; /* Opera */
+}
+@keyframes mychange {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: rotateX(90deg) rotateY(90deg);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: rotateX(270deg) rotateY(270deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+/* Firefox */
+@-moz-keyframes mychange {
+    0% {
+        -moz-transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        -moz-transform: rotateX(90deg) rotateY(90deg);
+    }
+    50% {
+        -moz-transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        -moz-transform: rotateX(270deg) rotateY(270deg);
+    }
+    100% {
+        -moz-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+/* Safari and Chrome */
+@-webkit-keyframes mychange {
+    0% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        -webkit-transform: rotateX(90deg) rotateY(90deg);
+    }
+    50% {
+        -webkit-transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        -webkit-transform: rotateX(270deg) rotateY(270deg);
+    }
+    100% {
+        -webkit-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+ /* Opera */
+@-o-keyframes mychange {
+    0% {
+        -o-transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        -o-transform: rotateX(90deg) rotateY(90deg);
+    }
+    50% {
+        -o-transform: rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        -o-transform: rotateX(270deg) rotateY(270deg);
+    }
+    100% {
+        -o-transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.surface {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+}
+
+.surface div {
+    width: 54px;
+    height: 54px;
+    border-radius: 5px;
+    display: inline-block;
+    border: 3px solid #000;
+}
+
+.front {
+    transform: translateZ(90px);
+    -ms-transform: translateZ(90px);/* IE 9 */
+    -webkit-transform: translateZ(90px);/* Safari and Chrome */
+    -moz-transform: translateZ(90px); /* Firefox */
+    -o-transform: translateZ(90px);/* Opera */
+}
+
+.back {
+    transform: translateZ(-90px);
+    -ms-transform: translateZ(-90px);/* IE 9 */
+    -webkit-transform: translateZ(-90px);/* Safari and Chrome */
+    -moz-transform: translateZ(-90px); /* Firefox */
+    -o-transform: translateZ(-90px);/* Opera */
+}
+
+.left {
+    transform: rotateY(90deg) translateZ(-90px);
+    -ms-transform: rotateY(90deg) translateZ(-90px);/* IE 9 */
+    -webkit-transform: rotateY(90deg) translateZ(-90px);/* Safari and Chrome */
+    -moz-transform: rotateY(90deg) translateZ(-90px); /* Firefox */
+    -o-transform: rotateY(90deg) translateZ(-90px);/* Opera */
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(90px);
+    -ms-transform: rotateY(90deg) translateZ(90px);/* IE 9 */
+    -webkit-transform: rotateY(90deg) translateZ(90px);/* Safari and Chrome */
+    -moz-transform: rotateY(90deg) translateZ(90px); /* Firefox */
+    -o-transform: rotateY(90deg) translateZ(90px);/* Opera */
+}
+
+.down {
+    transform: rotateX(90deg) translateZ(-90px);
+    -ms-transform: rotateX(90deg) translateZ(-90px);/* IE 9 */
+    -webkit-transform: rotateX(90deg) translateZ(-90px);/* Safari and Chrome */
+    -moz-transform: rotateX(90deg) translateZ(-90px); /* Firefox */
+    -o-transform: rotateX(90deg) translateZ(-90px);/* Opera */
+}
+
+.up {
+    transform: rotateX(90deg) translateZ(90px);
+    -ms-transform: rotateX(90deg) translateZ(90px);/* IE 9 */
+    -webkit-transform: rotateX(90deg) translateZ(90px);/* Safari and Chrome */
+    -moz-transform: rotateX(90deg) translateZ(90px); /* Firefox */
+    -o-transform: rotateX(90deg) translateZ(90px);/* Opera */
+}
+
+.front div {
+    background-color: orange;
+}
+
+.back div {
+    background-color: red;
+}
+
+.left div {
+    background-color: yellow;
+}
+
+.right div {
+    background-color: white;
+}
+
+.up div {
+    background-color: green;
+}
+
+.down div {
+    background-color: blue;
+}
